@@ -1,6 +1,8 @@
 # vuedemo-maoyan
 
-> A Vue.js project
+> 第一节：使用 vue-cli 创建项目。先把框架搭起来，熟悉路由和组件，后面继续更新至整个项目完成。
+> 
+> 详情参考 https://blog.csdn.net/AiHuanhuan110/article/details/89331738
 
 ## Build Setup
 
