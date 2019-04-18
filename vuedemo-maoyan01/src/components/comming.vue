@@ -1,6 +1,7 @@
 <template>
    <div class="comming">
-       即将上映的电影
+       <h3>即将上映的电影</h3>
+       <button @click="$router.push({name:'movieDetail'})">点击进入电影详情页</button>
        </div>
 </template>
    
