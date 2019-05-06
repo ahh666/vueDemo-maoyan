@@ -1,14 +1,14 @@
 # vuedemo-maoyan
 
-> 第二节：添加样式和内容。
+> 第三节
 >
-> - 添加内容和样式
-> - 使用axios请求数据，参考[这里](https://www.kancloud.cn/yunye/axios/234845)
-> - 添加局部左右滑动（即将上映页），[参考](https://blog.csdn.net/AiHuanhuan110/article/details/89407110) （左右滑动也可使用插件）
-> - 组件化开发，相同代码可以提取出来作为一个组件来调用，减少代码量，提高代码可复用性
-> - 路由传值跳转电影详情页，[参考](https://blog.csdn.net/AiHuanhuan110/article/details/89421405)
->
-> 完整参考 https://blog.csdn.net/AiHuanhuan110/article/details/89421279
+> - 组件化开发，标题部分
+> - 多处用到的代码就在全局进行注册
+> - 优化用户体验：当网速过慢时，显示加载动画。
+> - 播放宣传片
+> - 保留组件状态，避免重新渲染 `keep-alive`
+> - 图片懒加载
+> - 本节参考 https://blog.csdn.net/AiHuanhuan110/article/details/89883473
 
 ## Build Setup
 
