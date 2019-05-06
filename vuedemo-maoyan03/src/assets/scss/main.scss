@@ -1,0 +1,5 @@
+@mixin flex-box($direction:row){
+	display: flex;
+	flex-direction: $direction;
+	@content;
+}

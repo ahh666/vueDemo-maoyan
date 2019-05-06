@@ -1,0 +1,59 @@
+.movie-list{
+    width: 100%;
+    padding: 5px 12px;
+ }
+ .movie-img>img{
+    height: 90px;
+    width: 64px;
+    float: left;
+    margin-right: 8px;
+ }
+ .right-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ededed;
+    padding: 0px 10px 5px 3px;
+ }
+ .right-info>ul{
+    width: calc(100% - 56px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    padding: 5px 0px;
+    font-size: 13px;
+    color: #666;
+ }
+ .right-info>ul>li{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: 3px;
+ }
+ .movie-info .name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+ }
+ .movie-info .score>span{
+    font-weight: bold;
+    font-size: 14px;
+    color: #faaf00;
+ }
+ .btn>button{
+    width: 48px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+ }
+ .btn>.buy-btn{
+    background-color: #f03d37;
+    color: #fff;
+ }
+ .btn>.pre-btn{
+    background-color: #3c9fe6;
+    color: #fff;
+ }
