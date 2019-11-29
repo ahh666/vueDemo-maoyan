@@ -7,7 +7,7 @@
 > - 登陆验证
 > - 用户登录、注册
 > - 读存用户信息是使用vuex模拟数据库（结合真实数据库请参考[【全栈初体验】Vue+Node+MySQL实现前后端分离开发](https://blog.csdn.net/AiHuanhuan110/article/details/90674744)）
-> - 本节参考 blog待更新
+> - 本节参考  https://blog.csdn.net/AiHuanhuan110/article/details/103318660 
 
 ## Build Setup
 
