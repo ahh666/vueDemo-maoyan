@@ -13,7 +13,6 @@
 
 <script>
 import movieList from "./movieList"
-import axios from 'axios'
 
 // 导出组件
 export default {
@@ -24,15 +23,18 @@ export default {
       };
    },
    created() {
-      axios
-         .get("http://www.softeem.xin/maoyanApi/ajax/movieOnInfoList")
-         .then(res => {
-            this.hotList = res.data.movieList;
-         });
+      this.getMovieOnInfoList()
    },
    components: {
       movieList
-   }
+   },
+   methods: {
+    getMovieOnInfoList() {
+      this.$api.getMovieOnInfoList().then(res => {
+        this.hotList = res.movieList.splice(0, 10);
+      });
+    }
+  }
 };
 
 </script>

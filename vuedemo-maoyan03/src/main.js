@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Api from './api'
+
+Vue.prototype.$api = Api
 
 import pageTitle from './components/pageTitle'
 import loading from './layout/loading'

@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Api from './api'
 
+Vue.prototype.$api = Api
 
 // 在生产环境下把注释全部去掉
 Vue.config.productionTip = false

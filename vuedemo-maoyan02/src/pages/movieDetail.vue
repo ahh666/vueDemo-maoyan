@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="movieDetail">
     <div class="movie-header">
       <div class="bg-second"></div>
       <div class="bg-last"></div>
@@ -54,12 +54,14 @@ export default {
     };
   },
   created() {
-    let id = this.$route.query.id;
-    axios
-      .get("http://www.softeem.xin/maoyanApi/ajax/detailmovie?movieId=" + id)
-      .then(res => {
-        this.movieDetail = res.data.detailMovie;
-      });
+    this.getMovieDetail(this.$route.query.id)
+  },
+  methods: {
+    getMovieDetail(movieId) {
+      this.$api.getDetailMovie({ movieId }).then(res => {
+        this.movieDetail = res.detailMovie
+      })
+    }
   }
 };
 </script>

@@ -26,15 +26,17 @@ export default {
     };
   },
   created() {
-    axios
-      .get("http://www.softeem.xin/maoyanApi/ajax/movieOnInfoList")
-      .then(res => {
-        this.hotList = res.data.movieList;
-        this.isReady = true;
+      this.getMovieOnInfoList()
+   },
+   components: {
+      movieList
+   },
+   methods: {
+    getMovieOnInfoList() {
+      this.$api.getMovieOnInfoList().then(res => {
+        this.hotList = res.movieList.splice(0, 10);
       });
-  },
-  components: {
-    movieList
+    }
   }
 };
 </script>

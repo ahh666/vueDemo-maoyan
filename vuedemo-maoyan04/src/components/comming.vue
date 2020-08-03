@@ -42,25 +42,21 @@ export default {
     };
   },
   created() {
-    function getComingList() {
-      return axios.get(
-        "http://www.softeem.xin/maoyanApi/ajax/comingList?ci=57&token=&limit=10"
-      );
-    }
-
-    function getHopefulList() {
-      return axios.get(
-        "http://www.softeem.xin/maoyanApi/ajax/mostExpected?ci=57&limit=10&offset=0&token="
-      );
-    }
-    axios.all([getComingList(), getHopefulList()]).then(
-      axios.spread((comRes, hopeRes) => {
-        this.comingList = comRes.data.coming;
-        this.hopefulList = hopeRes.data.coming;
-        this.isReady = true;
-      })
-    );
-  }
+    this.getComingList();
+    this.getMostExpected();
+  },
+  methods: {
+    getComingList() {
+      this.$api.getComingList().then((res) => {
+        this.comingList = res.coming.splice(0, 10);
+      });
+    },
+    getMostExpected() {
+      this.$api.getMostExpected().then((res) => {
+        this.hopefulList = res.coming;
+      });
+    },
+  },
 };
 </script>
 

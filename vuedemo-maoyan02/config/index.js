@@ -10,7 +10,22 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/ajax': {
+        target: 'http://m.maoyan.com', // 请求的目标服务器接口
+        changeOrigin: true, 
+        pathRewrite: { 
+          '^/ajax': '/ajax' 
+        }
+      },
+      '/dianying': {
+        target: 'http://m.maoyan.com',
+        changeOrigin: true, 
+        pathRewrite: { 
+          '^/dianying': '/dianying' 
+        }
+      },
+    },
 
     // Various Dev Server settings
     host: '127.0.0.1', // can be overwritten by process.env.HOST

@@ -67,13 +67,14 @@ export default {
     };
   },
   created() {
-    let id = this.$route.query.id;
-    axios
-      .get("http://www.softeem.xin/maoyanApi/ajax/detailmovie?movieId=" + id)
-      .then(res => {
-        this.movieDetail = res.data.detailMovie;
-        this.isReady = true;
-      });
+    this.getMovieDetail(this.$route.query.id)
+  },
+  methods: {
+    getMovieDetail(movieId) {
+      this.$api.getDetailMovie({ movieId }).then(res => {
+        this.movieDetail = res.detailMovie
+      })
+    }
   }
 };
 
