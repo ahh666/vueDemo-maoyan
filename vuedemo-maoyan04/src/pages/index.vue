@@ -77,6 +77,7 @@ export default {
 }
 .main{
   padding-top: 100px;
+  padding-bottom: 51px;
 }
 .footer-nav {
   position: fixed;
